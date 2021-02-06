@@ -105,8 +105,8 @@ void BedlamTools::bin_redraw() {
 
     // print img buffer to QImage
     int i = 0;
-    for (int y = 0; y < 480; y++) {
-        for (int x = 0; x < 640; x++) {
+    for (int y = 0; y < image.height(); y++) {
+        for (int x = 0; x < image.width(); x++) {
             image.setPixel(x, y, get_color(screen_bufer.at(i)));
             i++;
         }
