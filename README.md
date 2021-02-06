@@ -28,7 +28,7 @@ For more information how to integrate QT with the Visual Studio, see QT document
 
 # How to use
 
-1. Compile or download from releases
+1. Compile or [download from releases](https://github.com/8street/BedlamTools/releases)
 2. Run
 3. Open any Bedlam .bin file. If you need, open Bedlam .pal palette file
 4. See image.
