@@ -4,6 +4,8 @@ Utility for the Bedlam 1996 game. Allows to view all images from the game files.
 
 [![Lines of Code](https://tokei.rs/b1/github/8street/BedlamTools?category=code)](https://github.com/XAMPPRocky/tokei)
 
+![preview](https://github.com/8street/BedlamTools/misc/bedlamtools.png)
+
 # Project State
 
 * Image: draw all images from binary files

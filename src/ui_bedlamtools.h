@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'bedlamtoolsElnYsu.ui'
+** Form generated from reading UI file 'bedlamtoolsOYWAwv.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.12.10
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef BEDLAMTOOLSELNYSU_H
-#define BEDLAMTOOLSELNYSU_H
+#ifndef BEDLAMTOOLSOYWAWV_H
+#define BEDLAMTOOLSOYWAWV_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
@@ -79,7 +79,7 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(graphics->sizePolicy().hasHeightForWidth());
         graphics->setSizePolicy(sizePolicy);
-        graphics->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        graphics->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphics->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         horizontalLayoutWidget = new QWidget(tab_img);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
@@ -259,4 +259,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // BEDLAMTOOLSELNYSU_H
+#endif // BEDLAMTOOLSOYWAWV_H
