@@ -1,9 +1,11 @@
 #pragma once
 
 #include <vector>
-#include <QtWidgets/QMainWindow>
-#include "ui_bedlamtools.h"
+#include <QtWidgets/QMainWindow>=
 
+#include "bin_file.h"
+#include "file.h"
+#include "ui_bedlamtools.h"
 
 class BedlamTools : public QMainWindow
 {
@@ -19,8 +21,8 @@ public:
     
 private:
     Ui::BedlamToolsClass ui;
-    QByteArray file_bin;
-    QByteArray file_pal;
+    BIN_File file_bin;
+    File file_pal;
     std::vector<uint8_t> screen_bufer;
     void bin_redraw();
     QRgb get_color(uint8_t value);

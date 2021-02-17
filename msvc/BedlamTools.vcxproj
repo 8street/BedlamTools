@@ -157,6 +157,9 @@
   <ItemGroup>
     <ClCompile Include="..\src\bedlamtools.cpp" />
     <ClCompile Include="..\src\Bedlam_func.cpp" />
+    <ClCompile Include="..\src\bin_file.cpp" />
+    <ClCompile Include="..\src\file.cpp" />
+    <ClCompile Include="..\src\helper.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\openfile.cpp" />
     <ClCompile Include="..\src\stdafx.cpp">
@@ -167,6 +170,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\bin_file.h" />
+    <ClInclude Include="..\src\file.h" />
+    <ClInclude Include="..\src\helper.h" />
     <ClInclude Include="..\src\stdafx.h" />
     <ClInclude Include="..\src\ui_bedlamtools.h" />
     <ClInclude Include="..\src\ui_openfile.h" />
