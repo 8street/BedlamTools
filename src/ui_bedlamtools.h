@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'bedlamtoolsOYWAwv.ui'
+** Form generated from reading UI file 'bedlamtoolsdMvCDn.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.12.10
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef BEDLAMTOOLSOYWAWV_H
-#define BEDLAMTOOLSOYWAWV_H
+#ifndef BEDLAMTOOLSDMVCDN_H
+#define BEDLAMTOOLSDMVCDN_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
@@ -103,10 +103,10 @@ public:
 
         spinBox_img = new QSpinBox(horizontalLayoutWidget);
         spinBox_img->setObjectName(QString::fromUtf8("spinBox_img"));
-        spinBox_img->setMinimum(1);
+        spinBox_img->setMinimum(0);
         spinBox_img->setMaximum(9999);
         spinBox_img->setSingleStep(1);
-        spinBox_img->setValue(1);
+        spinBox_img->setValue(0);
 
         horizontalLayout->addWidget(spinBox_img);
 
@@ -259,4 +259,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // BEDLAMTOOLSOYWAWV_H
+#endif // BEDLAMTOOLSDMVCDN_H
