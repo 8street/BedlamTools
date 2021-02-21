@@ -93,4 +93,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\qt\Genetive.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

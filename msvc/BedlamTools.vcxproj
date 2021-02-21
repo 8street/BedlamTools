@@ -180,6 +180,9 @@
     <QtMoc Include="..\src\bedlamtools.h" />
     <ClInclude Include="..\src\Bedlam_func.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\qt\Genetive.qss" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
