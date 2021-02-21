@@ -25,6 +25,10 @@ void BedlamTools::on_button_open_img_clicked() {
     // read file
     file_bin.load(bin_path.toStdString());
 
+    if (!file_bin.get_size()) {
+        return;
+    }
+
     // read image info
     int image_count = file_bin.get_img_count();
     ui.img_count->setText(QString::number(image_count));
@@ -74,6 +78,10 @@ void BedlamTools::bin_redraw() {
     int32_t img = ui.spinBox_img->value();
     uint16_t img_header = *reinterpret_cast<uint16_t*>(file_bin.get_img_header_ptr(img));
     ui.img_header->setText(QString::number(img_header));
+    ui.img_width->setText(QString::number( file_bin.get_img_width(img) ));
+    ui.img_height->setText(QString::number( file_bin.get_img_height(img) ));
+    ui.img_offset_x->setText(QString::number( file_bin.get_img_x_offset(img) ));
+    ui.img_offset_y->setText(QString::number( file_bin.get_img_y_offset(img) ));
 
     // read spinbox values
     int add_offset = ui.spinBox_img_offset->value();
@@ -119,4 +127,86 @@ QRgb BedlamTools::get_color(uint8_t value){
     int brightness = 4;
 
     return qRgb(file_pal.at(value * 3 + 2) * brightness, file_pal.at(value * 3 + 3) * brightness, file_pal.at(value * 3 + 4) * brightness);
+}
+
+
+void BedlamTools::on_button_open_dir_clicked()
+{
+    raw_directory = QFileDialog::getExistingDirectory(this, tr("Open a RAW/MRW directory"));
+
+    // set path to label
+    QString dir_str = QString::fromStdString("Directory: ") + raw_directory.path();
+    ui.label_directory->setText(dir_str);
+
+    QStringList raws = raw_directory.entryList(QStringList() << "*.raw" << "*.RAW" << "*.mrw" << "*.MRW", QDir::Files);
+    ui.listWidget->clear();
+    ui.listWidget->addItems(raws);
+}
+
+void BedlamTools::on_button_play_clicked()
+{
+    QString file_path;
+    if (m_playFile.isOpen()) {
+        m_playFile.close();
+    }
+    if (raw_directory.exists() && ui.listWidget->count()) {
+        file_path = raw_directory.path() + raw_directory.separator() + ui.listWidget->currentItem()->text();
+        m_playFile.setFileName(file_path);
+    }
+    if (m_playFile.exists()) {
+        m_playFile.open(QIODevice::ReadOnly);
+
+        QAudioFormat format;
+        // Set up the format, eg.
+        format.setSampleRate(ui.sampleratemultimedia->text().toInt());
+        format.setChannelCount(ui.channelsmultimedia->text().toInt());
+        format.setSampleSize(ui.bitsmultimedia->text().toInt());
+        format.setCodec("audio/pcm");
+        format.setByteOrder(QAudioFormat::LittleEndian);
+        format.setSampleType(QAudioFormat::UnSignedInt);
+
+        QAudioDeviceInfo info(QAudioDeviceInfo::defaultOutputDevice());
+        if (!info.isFormatSupported(format)) {
+            qWarning() << "Raw audio format not supported by backend, cannot play audio.";
+            return;
+        }
+
+        m_audio = new QAudioOutput(format, this);
+        connect(m_audio, SIGNAL(stateChanged(QAudio::State)), this, SLOT(handleStateChanged(QAudio::State)));
+        m_audio->start(&m_playFile);
+    }
+}
+
+void BedlamTools::on_button_stop_clicked()
+{
+    if (raw_directory.exists() && ui.listWidget->count()) {
+        if (m_playFile.exists() && m_playFile.isOpen())
+        {
+            m_playFile.close();
+            m_audio->stop();
+        }
+    }
+}
+
+void BedlamTools::handleStateChanged(QAudio::State newState)
+{
+    switch (newState) {
+    case QAudio::IdleState:
+        // Finished playing (no more data)
+        m_audio->stop();
+        m_playFile.close();
+        delete m_audio;
+        break;
+
+    case QAudio::StoppedState:
+        // Stopped for other reasons
+        if (m_audio->error() != QAudio::NoError) {
+            // Error handling
+        }
+        break;
+
+    default:
+        // ... other cases as appropriate
+        break;
+    }
 }
