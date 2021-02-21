@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'bedlamtoolsdMvCDn.ui'
+** Form generated from reading UI file 'bedlamtoolsSOCwPv.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.12.10
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef BEDLAMTOOLSDMVCDN_H
-#define BEDLAMTOOLSDMVCDN_H
+#ifndef BEDLAMTOOLSSOCWPV_H
+#define BEDLAMTOOLSSOCWPV_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
@@ -15,6 +15,8 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -52,11 +54,35 @@ public:
     QLabel* label_pal;
     QSpacerItem* verticalSpacer;
     QGridLayout* gridLayout;
+    QLabel* label_11;
+    QLabel* label_4;
+    QLabel* label_10;
     QLabel* img_count;
     QLabel* img_header;
-    QLabel* label_4;
     QLabel* label_6;
-    QWidget* tab_2;
+    QLabel* img_offset_x;
+    QLabel* label_12;
+    QLabel* img_width;
+    QLabel* img_height;
+    QLabel* img_offset_y;
+    QLabel* label_13;
+    QWidget* tab_raw;
+    QWidget* horizontalLayoutWidget_2;
+    QHBoxLayout* horizontalLayout_2;
+    QListWidget* listWidget;
+    QVBoxLayout* verticalLayout_2;
+    QPushButton* button_open_dir;
+    QLabel* label_directory;
+    QGridLayout* gridLayout_2;
+    QLineEdit* sampleratemultimedia;
+    QLineEdit* channelsmultimedia;
+    QLabel* label_8;
+    QLabel* label_3;
+    QLineEdit* bitsmultimedia;
+    QLabel* label_9;
+    QSpacerItem* verticalSpacer_2;
+    QPushButton* button_play;
+    QPushButton* button_stop;
     QStatusBar* statusBar;
 
     void setupUi(QMainWindow* BedlamToolsClass)
@@ -187,6 +213,21 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        label_11 = new QLabel(verticalLayoutWidget);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+
+        gridLayout->addWidget(label_11, 3, 0, 1, 1);
+
+        label_4 = new QLabel(verticalLayoutWidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        gridLayout->addWidget(label_4, 1, 0, 1, 1);
+
+        label_10 = new QLabel(verticalLayoutWidget);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+
+        gridLayout->addWidget(label_10, 2, 0, 1, 1);
+
         img_count = new QLabel(verticalLayoutWidget);
         img_count->setObjectName(QString::fromUtf8("img_count"));
 
@@ -197,23 +238,132 @@ public:
 
         gridLayout->addWidget(img_header, 1, 1, 1, 1);
 
-        label_4 = new QLabel(verticalLayoutWidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-
-        gridLayout->addWidget(label_4, 1, 0, 1, 1);
-
         label_6 = new QLabel(verticalLayoutWidget);
         label_6->setObjectName(QString::fromUtf8("label_6"));
 
         gridLayout->addWidget(label_6, 0, 0, 1, 1);
 
+        img_offset_x = new QLabel(verticalLayoutWidget);
+        img_offset_x->setObjectName(QString::fromUtf8("img_offset_x"));
+
+        gridLayout->addWidget(img_offset_x, 4, 1, 1, 1);
+
+        label_12 = new QLabel(verticalLayoutWidget);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+
+        gridLayout->addWidget(label_12, 4, 0, 1, 1);
+
+        img_width = new QLabel(verticalLayoutWidget);
+        img_width->setObjectName(QString::fromUtf8("img_width"));
+
+        gridLayout->addWidget(img_width, 2, 1, 1, 1);
+
+        img_height = new QLabel(verticalLayoutWidget);
+        img_height->setObjectName(QString::fromUtf8("img_height"));
+
+        gridLayout->addWidget(img_height, 3, 1, 1, 1);
+
+        img_offset_y = new QLabel(verticalLayoutWidget);
+        img_offset_y->setObjectName(QString::fromUtf8("img_offset_y"));
+
+        gridLayout->addWidget(img_offset_y, 5, 1, 1, 1);
+
+        label_13 = new QLabel(verticalLayoutWidget);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+
+        gridLayout->addWidget(label_13, 5, 0, 1, 1);
+
 
         verticalLayout->addLayout(gridLayout);
 
         tabWidget->addTab(tab_img, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tabWidget->addTab(tab_2, QString());
+        tab_raw = new QWidget();
+        tab_raw->setObjectName(QString::fromUtf8("tab_raw"));
+        horizontalLayoutWidget_2 = new QWidget(tab_raw);
+        horizontalLayoutWidget_2->setObjectName(QString::fromUtf8("horizontalLayoutWidget_2"));
+        horizontalLayoutWidget_2->setGeometry(QRect(10, 10, 771, 531));
+        horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        listWidget = new QListWidget(horizontalLayoutWidget_2);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+
+        horizontalLayout_2->addWidget(listWidget);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        button_open_dir = new QPushButton(horizontalLayoutWidget_2);
+        button_open_dir->setObjectName(QString::fromUtf8("button_open_dir"));
+        button_open_dir->setMinimumSize(QSize(0, 40));
+
+        verticalLayout_2->addWidget(button_open_dir);
+
+        label_directory = new QLabel(horizontalLayoutWidget_2);
+        label_directory->setObjectName(QString::fromUtf8("label_directory"));
+
+        verticalLayout_2->addWidget(label_directory);
+
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        sampleratemultimedia = new QLineEdit(horizontalLayoutWidget_2);
+        sampleratemultimedia->setObjectName(QString::fromUtf8("sampleratemultimedia"));
+
+        gridLayout_2->addWidget(sampleratemultimedia, 0, 1, 1, 1);
+
+        channelsmultimedia = new QLineEdit(horizontalLayoutWidget_2);
+        channelsmultimedia->setObjectName(QString::fromUtf8("channelsmultimedia"));
+
+        gridLayout_2->addWidget(channelsmultimedia, 1, 1, 1, 1);
+
+        label_8 = new QLabel(horizontalLayoutWidget_2);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+
+        gridLayout_2->addWidget(label_8, 1, 0, 1, 1);
+
+        label_3 = new QLabel(horizontalLayoutWidget_2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFrameShape(QFrame::NoFrame);
+
+        gridLayout_2->addWidget(label_3, 0, 0, 1, 1);
+
+        bitsmultimedia = new QLineEdit(horizontalLayoutWidget_2);
+        bitsmultimedia->setObjectName(QString::fromUtf8("bitsmultimedia"));
+
+        gridLayout_2->addWidget(bitsmultimedia, 2, 1, 1, 1);
+
+        label_9 = new QLabel(horizontalLayoutWidget_2);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+
+        gridLayout_2->addWidget(label_9, 2, 0, 1, 1);
+
+
+        verticalLayout_2->addLayout(gridLayout_2);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
+        button_play = new QPushButton(horizontalLayoutWidget_2);
+        button_play->setObjectName(QString::fromUtf8("button_play"));
+        button_play->setMinimumSize(QSize(0, 40));
+
+        verticalLayout_2->addWidget(button_play);
+
+        button_stop = new QPushButton(horizontalLayoutWidget_2);
+        button_stop->setObjectName(QString::fromUtf8("button_stop"));
+        button_stop->setMinimumSize(QSize(0, 40));
+        button_stop->setSizeIncrement(QSize(0, 0));
+
+        verticalLayout_2->addWidget(button_stop);
+
+
+        horizontalLayout_2->addLayout(verticalLayout_2);
+
+        tabWidget->addTab(tab_raw, QString());
         BedlamToolsClass->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(BedlamToolsClass);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
@@ -239,16 +389,34 @@ public:
         label_7->setText(QApplication::translate("BedlamToolsClass", "Additional offset:", nullptr));
         label->setText(QApplication::translate("BedlamToolsClass", "X:", nullptr));
         label_2->setText(QApplication::translate("BedlamToolsClass", "Y:", nullptr));
-        button_open_img->setText(QApplication::translate("BedlamToolsClass", "Open BIN", nullptr));
+        button_open_img->setText(QApplication::translate("BedlamToolsClass", "Open image BIN file", nullptr));
         label_bin->setText(QApplication::translate("BedlamToolsClass", "No File", nullptr));
-        button_open_pal->setText(QApplication::translate("BedlamToolsClass", "Open PAL", nullptr));
+        button_open_pal->setText(QApplication::translate("BedlamToolsClass", "Open palette PAL file", nullptr));
         label_pal->setText(QApplication::translate("BedlamToolsClass", "No File", nullptr));
+        label_11->setText(QApplication::translate("BedlamToolsClass", "IMG Height", nullptr));
+        label_4->setText(QApplication::translate("BedlamToolsClass", "IMG Header", nullptr));
+        label_10->setText(QApplication::translate("BedlamToolsClass", "IMG Width", nullptr));
         img_count->setText(QApplication::translate("BedlamToolsClass", "0", nullptr));
         img_header->setText(QApplication::translate("BedlamToolsClass", "0", nullptr));
-        label_4->setText(QApplication::translate("BedlamToolsClass", "IMG Header", nullptr));
         label_6->setText(QApplication::translate("BedlamToolsClass", "IMG Count", nullptr));
+        img_offset_x->setText(QApplication::translate("BedlamToolsClass", "0", nullptr));
+        label_12->setText(QApplication::translate("BedlamToolsClass", "IMG Offset X", nullptr));
+        img_width->setText(QApplication::translate("BedlamToolsClass", "0", nullptr));
+        img_height->setText(QApplication::translate("BedlamToolsClass", "0", nullptr));
+        img_offset_y->setText(QApplication::translate("BedlamToolsClass", "0", nullptr));
+        label_13->setText(QApplication::translate("BedlamToolsClass", "IMG Offset Y", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_img), QApplication::translate("BedlamToolsClass", "BIN", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("BedlamToolsClass", "RAW", nullptr));
+        button_open_dir->setText(QApplication::translate("BedlamToolsClass", "Open Directory", nullptr));
+        label_directory->setText(QApplication::translate("BedlamToolsClass", "Directory: ", nullptr));
+        sampleratemultimedia->setText(QApplication::translate("BedlamToolsClass", "11025", nullptr));
+        channelsmultimedia->setText(QApplication::translate("BedlamToolsClass", "1", nullptr));
+        label_8->setText(QApplication::translate("BedlamToolsClass", "Num channels:", nullptr));
+        label_3->setText(QApplication::translate("BedlamToolsClass", "Samplerate:", nullptr));
+        bitsmultimedia->setText(QApplication::translate("BedlamToolsClass", "8", nullptr));
+        label_9->setText(QApplication::translate("BedlamToolsClass", "Bits per sample:", nullptr));
+        button_play->setText(QApplication::translate("BedlamToolsClass", "Play", nullptr));
+        button_stop->setText(QApplication::translate("BedlamToolsClass", "Stop", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_raw), QApplication::translate("BedlamToolsClass", "RAW/MRW", nullptr));
     } // retranslateUi
 
 };
@@ -259,4 +427,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // BEDLAMTOOLSDMVCDN_H
+#endif // BEDLAMTOOLSSOCWPV_H

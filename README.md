@@ -1,6 +1,6 @@
 # BedlamTools
 
-Utility for the Bedlam 1996 game. Allows to view all images from the game files.
+Utility for the Bedlam 1996 game. Allows to view all images from the game files. Also allows to listen all sound files.
 
 [![Lines of Code](https://tokei.rs/b1/github/8street/BedlamTools?category=code)](https://github.com/XAMPPRocky/tokei)
 
@@ -8,8 +8,9 @@ Utility for the Bedlam 1996 game. Allows to view all images from the game files.
 
 # Project State
 
-* Image: draw all images from binary files
-* Sound: planning
+* Image: drawing all images from binary BIN files
+* Sound: playing all RAW, MRW sound files
+* MIDI: not playing MRS files (planning)
 
 # Contributing
 
@@ -30,5 +31,13 @@ For more information how to integrate QT with the Visual Studio, see QT document
 
 1. Compile or [download from releases](https://github.com/8street/BedlamTools/releases)
 2. Run
+
+To see images:
+
 3. Open any Bedlam .bin file. If you need, open Bedlam .pal palette file
 4. See image.
+
+To listen sound:
+
+3. Open any Bedlam directory with RAW, RMW files
+4. Click play to listen sound
