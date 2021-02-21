@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
+ <author>8street</author>
  <class>BedlamToolsClass</class>
  <widget class="QMainWindow" name="BedlamToolsClass">
   <property name="geometry">
