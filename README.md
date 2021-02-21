@@ -40,4 +40,4 @@ To see images:
 To listen sound:
 
 3. Open any Bedlam directory with RAW, RMW files
-4. Click play to listen sound
+4. Click play to listen sound.
