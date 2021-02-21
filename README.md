@@ -39,5 +39,5 @@ To see images:
 
 To listen sound:
 
-3. Open any Bedlam directory with RAW, RMW files
+3. Open any Bedlam directory with RAW, MRW files
 4. Click play to listen sound.
